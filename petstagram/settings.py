@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ft@g33t0n-n_+y970s6zepyeos2iwf+thev$390eth@8d(-ta='
+SECRET_KEY = 'django-insecure-i4o5i^c%9o-p!yw$cv7l6zwoof!ewwkxg^=1m@=$qc*8aa(6ih'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -43,6 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+     # 'petstagram.pets',
+     # 'petstagram.photos',
+     # 'petstagram.accounts',
+     # 'petstagram.common',
 ] + MY_APPS
 
 MIDDLEWARE = [
@@ -81,6 +86,13 @@ WSGI_APPLICATION = 'petstagram.wsgi.application'
 
 DATABASES = {
     'default': {
+        # "ENGINE": "django.db.backends.postgresql",
+        # "NAME": "petstagram_app",
+        # "USER": "postgres",
+        # "PASSWORD": "admin",
+        # "HOST": "127.0.0.1",
+        # "PORT": "5432",
+
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
@@ -122,10 +134,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
 STATICFILES_DIRS = (
     BASE_DIR / 'static',
 )
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
